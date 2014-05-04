@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            Images...!
+        </title>
+    </head>
+  
+
+    <body bgcolor="grey">
+        <form name="f1">
+            <h2>Enter the value of rows and columns</h2></br></br>
+            <label>Rows:<input type="text" align="center" name="text1"id="r1" size="1"></input></label></br></br>
+            <label>Columns:<input type="text" align="center" name="text2"id="c1" size="1"></input></label></br></br>
+            <input type="button" id="b1" value="Display" onclick="show_images()"></input>
+        </form>
+      <script type="text/javascript">
+     
+     function show_images()
+     {
+          var n=0,x=0,i=0,j=0,k=0;
+         Pic = new Array(20);
+
+         var m=0;
+         var rows=document.getElementById("r1").value;
+         var cols=document.getElementById("c1").value;
+        // alert(rows+" "+" "+cols) ;
+
+      do
+      {
+      Pic[n] = new Image();
+      Pic[n].src = "C:/Program Files (x86)/wamp/www/review/rows_cols/images\1.jpg";
+      //alert(Pic[n].src);
+      n++;
+      Pic[n] = new Image();
+      Pic[n].src = "C:/Program Files (x86)/wamp/www/review/rows_cols/images/Koala.jpg";
+      //alert(Pic[n].src);
+      n++;
+      }while(n<30);
+   
+     
+     document.writeln("<table  align=center  border=1 cellpadding=5 cellspacing=5 bgcolor=yellow> <tr><td>");
+        for (i=0; i < rows; i++)
+        {
+          document.writeln("<NOBR>");
+          for (j=0; j < cols; j++)
+        {
+         //document.write(CWord.charAt(m));
+         
+         document.write("<IMG src='images/Koala.jpg' height=100 width=100 alt='image'  border=1 \">");
+        document.write("<IMG src='images/1.jpg' height=100 width=100 alt='image'  border=1 \">");
+         document.write("<IMG src='images/globe.jpeg' height=100 width=100 alt='image'  border=1 \">");
+
+        }
+         document.writeln("</NOBR><BR>");
+        }
+
+         document.writeln("</td></tr>");
+         document.close();
+     }
+     
+</script>
+</body>
